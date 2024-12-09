@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&family=Roboto+Slab:wght@300;500&display=swap');
+
+* {
+  box-sizing: border-box;
+  outline: none;
+}
+
+body {
+  background-color: #e0f7fa;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0;
+  padding-top: 3rem;
+}
+
+.add {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 0.7rem 1.2rem;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-family: 'Roboto Slab', serif;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.add:hover {
+  background-color: #45a045;
+}
+
+.add:active {
+  transform: scale(0.95);
+}
+
+.note {
+  background-color: #fff;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  border-left: 5px solid #4caf50;
+  margin: 20px;
+  height: 350px;
+  width: 320px;
+  overflow-y: auto;
+  border-radius: 8px;
+  transition: transform 0.2s;
+}
+
+.note:hover {
+  transform: scale(1.02);
+}
+
+.note .tools {
+  background-color: #4caf50;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.note .tools button {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+.note .tools button:hover {
+  color: #c8e6c9;
+}
+
+.note textarea {
+  font-family: 'Roboto Slab', serif;
+  font-size: 1.1rem;
+  border: none;
+  height: calc(100% - 50px);
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0 0 8px 8px;
+  resize: none;
+  outline: none;
+}
+
+.main {
+  padding: 1rem;
+  font-family: 'Roboto Slab', serif;
+  font-size: 1.1rem;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Scrollbar styling */
+.note::-webkit-scrollbar {
+  width: 8px;
+}
+
+.note::-webkit-scrollbar-thumb {
+  background-color: #4caf50;
+  border-radius: 4px;
+}
+
+.note::-webkit-scrollbar-track {
+  background-color: #e0f7fa;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .note {
+    width: 90%;
+    height: auto;
+  }
+}
